@@ -1,0 +1,4 @@
+Data\ Structures/build/
+*.o
+s_stack
+s_queue
