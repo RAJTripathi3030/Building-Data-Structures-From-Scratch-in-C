@@ -1,0 +1,37 @@
+Inserting 3 items...
+--- HashMap State (Size: 3, Capacity: 4) ---
+[0] NULL
+[1] Key: 'Orange' | Value: 300
+[2] Key: 'Banana' | Value: 200
+[3] Key: 'Apple' | Value: 100
+----------------------------------------------
+
+Inserting 'Grapes' (Triggers Resize!)...
+--- HashMap State (Size: 4, Capacity: 8) ---
+[0] Key: 'Grapes' | Value: 400
+[1] Key: 'Orange' | Value: 300
+[2] NULL
+[3] NULL
+[4] NULL
+[5] NULL
+[6] Key: 'Banana' | Value: 200
+[7] Key: 'Apple' | Value: 100
+----------------------------------------------
+
+Updating 'Apple' to 150...
+Lookup 'Apple': 150
+
+Deleting 'Banana'...
+--- HashMap State (Size: 3, Capacity: 8) ---
+[0] Key: 'Grapes' | Value: 400
+[1] Key: 'Orange' | Value: 300
+[2] NULL
+[3] NULL
+[4] NULL
+[5] NULL
+[6] TOMBSTONE (formerly 'Banana')
+[7] Key: 'Apple' | Value: 150
+----------------------------------------------
+Lookup deleted 'Banana': -1
+
+Freeing HashMap...
